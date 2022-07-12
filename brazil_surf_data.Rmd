@@ -13,13 +13,13 @@ library(rvest)
 
 ```{r}
 # Web address of Wannasurf zone in Brazil
-RioGrandeDoSol_link = "https://www.wannasurf.com/spot/South_America/Brazil/Rio_Grande_do_Sul/index.html"
+RioGrandeDoSul_link = "https://www.wannasurf.com/spot/South_America/Brazil/Rio_Grande_do_Sul/index.html"
 
 # Read in html address
-RioGrandeDoSol_page = read_html(RioGrandeDoSol_link) 
+RioGrandeDoSul_page = read_html(RioGrandeDoSul_link) 
 
 # Select data table from web and convert into readable format
-RioGrandeDoSol_table = RioGrandeDoSol_page %>%
+RioGrandeDoSul_table = RioGrandeDoSul_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
@@ -113,6 +113,78 @@ BahiaNorte_link = "https://www.wannasurf.com/spot/South_America/Brazil/Bahia_Nor
 BahiaNorte_page = read_html(BahiaNorte_link) 
 
 BahiaNorte_table = BahiaNorte_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+BahiaSul_link = "https://www.wannasurf.com/spot/South_America/Brazil/Bahia_Sul/index.html"
+
+BahiaSul_page = read_html(BahiaSul_link) 
+
+BahiaSul_table = BahiaSul_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+SergipeAlagoas_link = "https://www.wannasurf.com/spot/South_America/Brazil/Sergipe-Alagoas/index.html"
+
+SergipeAlagoas_page = read_html(SergipeAlagoas_link) 
+
+SergipeAlagoas_table = SergipeAlagoas_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+ParaibaPernambucco_link = "https://www.wannasurf.com/spot/South_America/Brazil/Paraiba_Pernambucco/index.html"
+
+ParaibaPernambucco_page = read_html(ParaibaPernambucco_link) 
+
+ParaibaPernambucco_table = ParaibaPernambucco_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+RioGrandeDoNorte_link = "https://www.wannasurf.com/spot/South_America/Brazil/Rio_Grande_Do_Norte/index.html"
+
+RioGrandeDoNorte_page = read_html(RioGrandeDoNorte_link) 
+
+RioGrandeDoNorte_table = RioGrandeDoNorte_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+FernandoDoNoronha_link = "https://www.wannasurf.com/spot/South_America/Brazil/Fernando_do_Noronha/index.html"
+
+FernandoDoNoronha_page = read_html(FernandoDoNoronha_link) 
+
+FernandoDoNoronha_table = FernandoDoNoronha_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+Ceara_link = "https://www.wannasurf.com/spot/South_America/Brazil/Ceara/index.html"
+
+Ceara_page = read_html(Ceara_link) 
+
+Ceara_table = Ceara_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+Maranhao_link = "https://www.wannasurf.com/spot/South_America/Brazil/Maranhao/index.html"
+
+Maranhao_page = read_html(Maranhao_link) 
+
+Maranhao_table = Maranhao_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+Para_link = "https://www.wannasurf.com/spot/South_America/Brazil/Para/index.html"
+
+Para_page = read_html(Para_link) 
+
+Para_table = Para_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 ```
