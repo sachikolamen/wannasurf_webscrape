@@ -1,0 +1,28 @@
+---
+title: "Wannasurf Data Webscrape"
+author: "Sachiko Lamen"
+date: "7/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(rvest)
+```
+
+```{r}
+# Web address of Wannasurf zone in Brazil
+RioGrandeDoSol_link = "https://www.wannasurf.com/spot/South_America/Brazil/Rio_Grande_do_Sul/index.html"
+
+# Read in html address
+RioGrandeDoSol_page = read_html(RioGrandeDoSol_link) 
+
+# Select data table from web and convert into readable format
+RioGrandeDoSol_table = RioGrandeDoSol_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+# **Important, still need to manually enter wave quality and GPS location
+```
+
