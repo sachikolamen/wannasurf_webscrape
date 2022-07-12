@@ -5,11 +5,13 @@ date: "7/12/2022"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include=FALSE, warning = FALSE, message = FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(tidyverse)
 library(rvest)
 ```
+
+#### Begin Scraping 
 
 ```{r}
 # Web address of Wannasurf zone in Brazil
@@ -189,3 +191,4 @@ Para_table = Para_page %>%
   html_table() %>% .[[1]]
 ```
 
+#### End Scraping 
