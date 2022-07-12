@@ -26,3 +26,94 @@ RioGrandeDoSol_table = RioGrandeDoSol_page %>%
 # **Important, still need to manually enter wave quality and GPS location
 ```
 
+```{r}
+SantaCatarinaSouth_link = "https://www.wannasurf.com/spot/South_America/Brazil/Santa_Catarina/index.html"
+
+SantaCatarinaSouth_page = read_html(SantaCatarinaSouth_link) 
+
+SantaCatarinaSouth_table = SantaCatarinaSouth_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+Florianopolis_link = "https://www.wannasurf.com/spot/South_America/Brazil/Florianopolis/index.html"
+
+Florianopolis_page = read_html(Florianopolis_link) 
+
+Florianopolis_table = Florianopolis_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+SantaCatarinaNorth_link = "https://www.wannasurf.com/spot/South_America/Brazil/Santa_Catarina_North/index.html"
+
+SantaCatarinaNorth_page = read_html(SantaCatarinaNorth_link) 
+
+SantaCatarinaNorth_table = SantaCatarinaNorth_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+RioDeJaneiroNorte_link = "https://www.wannasurf.com/spot/South_America/Brazil/Rio_de_Janeiro_Norte/index.html"
+
+RioDeJaneiroNorte_page = read_html(RioDeJaneiroNorte_link) 
+
+RioDeJaneiroNorte_table = RioDeJaneiroNorte_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+Parana_link = "https://www.wannasurf.com/spot/South_America/Brazil/Parana/index.html"
+
+Parana_page = read_html(Parana_link) 
+
+Parana_table = Parana_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+SaoPauloSouth_link = "https://www.wannasurf.com/spot/South_America/Brazil/Sao_Paulo_South_Coast/index.html"
+
+SaoPauloSouth_page = read_html(SaoPauloSouth_link) 
+
+SaoPauloSouth_table = SaoPauloSouth_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+SaoPauloNorth_link = "https://www.wannasurf.com/spot/South_America/Brazil/Sao_Paulo_North_Coast/index.html"
+
+SaoPauloNorth_page = read_html(SaoPauloNorth_link) 
+
+SaoPauloNorth_table = SaoPauloNorth_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+RioDeJaneiroCity_link = "https://www.wannasurf.com/spot/South_America/Brazil/Rio_de_Janeiro_City/index.html"
+
+RioDeJaneiroCity_page = read_html(RioDeJaneiroCity_link) 
+
+RioDeJaneiroCity_table = RioDeJaneiroCity_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+EsperitoSanto_link = "https://www.wannasurf.com/spot/South_America/Brazil/Espirito_Santo/index.html"
+
+EsperitoSanto_page = read_html(EsperitoSanto_link) 
+
+EsperitoSanto_table = EsperitoSanto_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+
+###
+BahiaNorte_link = "https://www.wannasurf.com/spot/South_America/Brazil/Bahia_North_Coast/index.html"
+
+BahiaNorte_page = read_html(BahiaNorte_link) 
+
+BahiaNorte_table = BahiaNorte_page %>%
+  html_nodes("table#wanna-table") %>%
+  html_table() %>% .[[1]]
+```
+
