@@ -25,6 +25,12 @@ RioGrandeDoSul_table = RioGrandeDoSul_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
+# Rename first column to "Surf Spots" (get rid of number on the end so we can join everything)
+names(RioGrandeDoSul_table)[1] <- "Surf Spots"
+
+# Add zone column
+RioGrandeDoSul_table$Zone <- "Rio Grande Do Sul"
+
 # **Important, still need to manually enter wave quality and GPS location
 ```
 
@@ -37,6 +43,10 @@ SantaCatarinaSouth_table = SantaCatarinaSouth_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
+names(SantaCatarinaSouth_table)[1] <- "Surf Spots"
+
+SantaCatarinaSouth_table$Zone <- "Santa Catarina South"
+
 ###
 Florianopolis_link = "https://www.wannasurf.com/spot/South_America/Brazil/Florianopolis/index.html"
 
@@ -45,6 +55,10 @@ Florianopolis_page = read_html(Florianopolis_link)
 Florianopolis_table = Florianopolis_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
+
+names(Florianopolis_table)[1] <- "Surf Spots"
+
+Florianopolis_table$Zone <- "Florianopolis"
 
 ###
 SantaCatarinaNorth_link = "https://www.wannasurf.com/spot/South_America/Brazil/Santa_Catarina_North/index.html"
@@ -55,6 +69,10 @@ SantaCatarinaNorth_table = SantaCatarinaNorth_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
+names(SantaCatarinaNorth_table)[1] <- "Surf Spots"
+
+SantaCatarinaNorth_table$Zone <- "Santa Catarina North"
+
 ###
 RioDeJaneiroNorte_link = "https://www.wannasurf.com/spot/South_America/Brazil/Rio_de_Janeiro_Norte/index.html"
 
@@ -63,6 +81,10 @@ RioDeJaneiroNorte_page = read_html(RioDeJaneiroNorte_link)
 RioDeJaneiroNorte_table = RioDeJaneiroNorte_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
+
+names(RioDeJaneiroNorte_table)[1] <- "Surf Spots"
+
+RioDeJaneiroNorte_table$Zone <- "Rio De Janeiro Norte"
 
 ###
 Parana_link = "https://www.wannasurf.com/spot/South_America/Brazil/Parana/index.html"
@@ -73,6 +95,10 @@ Parana_table = Parana_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
+names(Parana_table)[1] <- "Surf Spots"
+
+Parana_table$Zone <- "Parana"
+
 ###
 SaoPauloSouth_link = "https://www.wannasurf.com/spot/South_America/Brazil/Sao_Paulo_South_Coast/index.html"
 
@@ -81,6 +107,10 @@ SaoPauloSouth_page = read_html(SaoPauloSouth_link)
 SaoPauloSouth_table = SaoPauloSouth_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
+
+names(SaoPauloSouth_table)[1] <- "Surf Spots"
+
+SaoPauloSouth_table$Zone <- "Sao Paolo South"
 
 ###
 SaoPauloNorth_link = "https://www.wannasurf.com/spot/South_America/Brazil/Sao_Paulo_North_Coast/index.html"
@@ -91,6 +121,10 @@ SaoPauloNorth_table = SaoPauloNorth_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
+names(SaoPauloNorth_table)[1] <- "Surf Spots"
+
+SaoPauloNorth_table$Zone <- "Sao Paulo North"
+
 ###
 RioDeJaneiroCity_link = "https://www.wannasurf.com/spot/South_America/Brazil/Rio_de_Janeiro_City/index.html"
 
@@ -99,6 +133,10 @@ RioDeJaneiroCity_page = read_html(RioDeJaneiroCity_link)
 RioDeJaneiroCity_table = RioDeJaneiroCity_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
+
+names(RioDeJaneiroCity_table)[1] <- "Surf Spots"
+
+RioDeJaneiroCity_table$Zone <- "Rio De Janeiro City"
 
 ###
 EsperitoSanto_link = "https://www.wannasurf.com/spot/South_America/Brazil/Espirito_Santo/index.html"
@@ -109,6 +147,10 @@ EsperitoSanto_table = EsperitoSanto_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
+names(EsperitoSanto_table)[1] <- "Surf Spots"
+
+EsperitoSanto_table$Zone <- "Esperito Santo"
+
 ###
 BahiaNorte_link = "https://www.wannasurf.com/spot/South_America/Brazil/Bahia_North_Coast/index.html"
 
@@ -117,6 +159,10 @@ BahiaNorte_page = read_html(BahiaNorte_link)
 BahiaNorte_table = BahiaNorte_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
+
+names(BahiaNorte_table)[1] <- "Surf Spots"
+
+BahiaNorte_table$Zone <- "Bahia Norte"
 
 ###
 BahiaSul_link = "https://www.wannasurf.com/spot/South_America/Brazil/Bahia_Sul/index.html"
@@ -127,6 +173,10 @@ BahiaSul_table = BahiaSul_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
+names(BahiaSul_table)[1] <- "Surf Spots"
+
+BahiaSul_table$Zone <- "Bahia Sul"
+
 ###
 SergipeAlagoas_link = "https://www.wannasurf.com/spot/South_America/Brazil/Sergipe-Alagoas/index.html"
 
@@ -135,6 +185,10 @@ SergipeAlagoas_page = read_html(SergipeAlagoas_link)
 SergipeAlagoas_table = SergipeAlagoas_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
+
+names(SergipeAlagoas_table)[1] <- "Surf Spots"
+
+SergipeAlagoas_table$Zone <- "Sergipe Alagoas"
 
 ###
 ParaibaPernambucco_link = "https://www.wannasurf.com/spot/South_America/Brazil/Paraiba_Pernambucco/index.html"
@@ -145,6 +199,10 @@ ParaibaPernambucco_table = ParaibaPernambucco_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
+names(ParaibaPernambucco_table)[1] <- "Surf Spots"
+
+ParaibaPernambucco_table$Zone <- "Paraiba and Pernambucco"
+
 ###
 RioGrandeDoNorte_link = "https://www.wannasurf.com/spot/South_America/Brazil/Rio_Grande_Do_Norte/index.html"
 
@@ -153,6 +211,10 @@ RioGrandeDoNorte_page = read_html(RioGrandeDoNorte_link)
 RioGrandeDoNorte_table = RioGrandeDoNorte_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
+
+names(RioGrandeDoNorte_table)[1] <- "Surf Spots"
+
+RioGrandeDoNorte_table$Zone <- "Rio Grande Do Norte"
 
 ###
 FernandoDoNoronha_link = "https://www.wannasurf.com/spot/South_America/Brazil/Fernando_do_Noronha/index.html"
@@ -163,6 +225,10 @@ FernandoDoNoronha_table = FernandoDoNoronha_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
+names(FernandoDoNoronha_table)[1] <- "Surf Spots"
+
+FernandoDoNoronha_table$Zone <- "Fernando Do Noronha"
+
 ###
 Ceara_link = "https://www.wannasurf.com/spot/South_America/Brazil/Ceara/index.html"
 
@@ -171,6 +237,10 @@ Ceara_page = read_html(Ceara_link)
 Ceara_table = Ceara_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
+
+names(Ceara_table)[1] <- "Surf Spots"
+
+Ceara_table$Zone <- "Ceara"
 
 ###
 Maranhao_link = "https://www.wannasurf.com/spot/South_America/Brazil/Maranhao/index.html"
@@ -181,6 +251,10 @@ Maranhao_table = Maranhao_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
 
+names(Maranhao_table)[1] <- "Surf Spots"
+
+Maranhao_table$Zone <- "Maranhao"
+
 ###
 Para_link = "https://www.wannasurf.com/spot/South_America/Brazil/Para/index.html"
 
@@ -189,6 +263,17 @@ Para_page = read_html(Para_link)
 Para_table = Para_page %>%
   html_nodes("table#wanna-table") %>%
   html_table() %>% .[[1]]
+
+names(Para_table)[1] <- "Surf Spots"
+
+Para_table$Zone <- "Para"
 ```
 
 #### End Scraping 
+
+```{r}
+# join tables
+master_table <- bind_rows(BahiaNorte_table, BahiaSul_table, Ceara_table, EsperitoSanto_table, FernandoDoNoronha_table, Florianopolis_table, Maranhao_table, Para_table, ParaibaPernambucco_table, Parana_table, RioDeJaneiroCity_table, RioDeJaneiroNorte_table, RioGrandeDoNorte_table, RioGrandeDoSul_table, SantaCatarinaNorth_table, SantaCatarinaSouth_table, SaoPauloNorth_table, SaoPauloSouth_table, SergipeAlagoas_table)
+
+# exported master_table to excel sheet in console (not including code in Rmd so it doesn't export everytime and overwrite the sheet)
+```
