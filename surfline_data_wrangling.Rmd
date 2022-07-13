@@ -1,0 +1,26 @@
+---
+title: "Surfline data wrangling"
+author: "Kort Alexander"
+date: "2022-07-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(here)
+```
+
+# Data input and wrangling
+
+```{r}
+surf_spots <- read_csv(here("Surfline global dataset.csv")) %>% 
+  drop_na()
+
+# filter for spots in brazil based on lat and long
+brazil_surf_spots <- surf_spots %>% 
+  filter(Lat < 5.0, Lat > -34.0, Lon > -55, Lon < -32)
+
+# writing results to new excel file in console
+```
