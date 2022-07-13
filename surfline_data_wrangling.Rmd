@@ -12,6 +12,8 @@ library(tidyverse)
 library(here)
 ```
 
+This code filters the surfline global dataset for surf spots in Brazil based on latitude and longitude
+
 # Data input and wrangling
 
 ```{r}
